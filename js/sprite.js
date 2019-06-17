@@ -6,7 +6,7 @@ class Sprite {
       this.w = this.animation[0].width;
       this.len = this.animation.length;
       this.speed = speed;
-      this.index = 0;
+      this.index = random(7);
     }
   
     show() {
@@ -16,7 +16,7 @@ class Sprite {
   
     animate() {
       this.index += this.speed;
-      this.x = 0;
+      this.x += this.speed * 1;
   
       if (this.x > width) {
         this.x = -this.w;
